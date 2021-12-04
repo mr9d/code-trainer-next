@@ -1,8 +1,19 @@
-import "../styles/globals.css";
+import "../styles/normalize.css";
 import type { AppProps } from "next/app";
+import { Layout } from "../components/Layout";
+import Head from 'next/head';
 
-function MyApp({ Component, pageProps }: AppProps) {
-  return <Component {...pageProps} />;
+function CodeTrainerApp({ Component, pageProps }: AppProps) {
+  return (
+    <Layout>
+      <Head>
+        <title>Code trainer</title>
+        <meta name="description" content="Code trainer application" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Component {...pageProps} />
+    </Layout>
+  );
 }
 
-export default MyApp;
+export default CodeTrainerApp;
