@@ -30,6 +30,6 @@ export class Challenge extends Component<ChallengeProps, ChallengeState> {
         <input type="button" value="Start" onClick={this.startButtonClick} />
         <input type="button" value="Stop" onClick={this.stopButtonClick} />
       </>
-    );
+    )
   };
 }
