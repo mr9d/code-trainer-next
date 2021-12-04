@@ -27,7 +27,7 @@ export class Challenge extends Component<ChallengeProps, ChallengeState> {
     return (
       <>
         <Timer initialValue={20} started={this.state.timerStarted} />
-        <input type="button" value="Start 22" onClick={this.startButtonClick} />
+        <input type="button" value="Start" onClick={this.startButtonClick} />
         <input type="button" value="Stop" onClick={this.stopButtonClick} />
       </>
     );
