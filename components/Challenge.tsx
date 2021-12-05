@@ -26,7 +26,7 @@ export class Challenge extends Component<ChallengeProps, ChallengeState> {
   public render = () => {
     return (
       <>
-        <Timer initialValue={20} started={this.state.timerStarted} />
+        <Timer initialValue={20} started={this.state.timerStarted} onFinish={() => 1} />
         <input type="button" value="Start" onClick={this.startButtonClick} />
         <input type="button" value="Stop" onClick={this.stopButtonClick} />
       </>

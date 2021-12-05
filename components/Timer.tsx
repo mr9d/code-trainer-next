@@ -3,13 +3,14 @@ import { Component } from "react";
 export type TimerProps = {
   initialValue: number;
   started: boolean;
+  onFinish: () => void;
 };
 
 export type TimerState = {
   value: number;
   started: boolean;
   startTime: number;
-  intervalId: NodeJS.Timer | undefined
+  intervalId: NodeJS.Timer | undefined;
 };
 
 export class Timer extends Component<TimerProps, TimerState> {
@@ -24,10 +25,15 @@ export class Timer extends Component<TimerProps, TimerState> {
   }
 
   private tick = () => {
-    this.setState({ value: this.state.value - 1 });
-  }
+    const value: number = this.state.value - 1;
+    this.setState({ value, started: value === 0 }, () => {
+      if (value === 0) {
+        this.props.onFinish();
+      }
+    });
+  };
 
-  componentDidUpdate(prevProps: Readonly<TimerProps>, prevState: Readonly<TimerState>) {
+  public componentDidUpdate(prevProps: Readonly<TimerProps>, prevState: Readonly<TimerState>) {
     if (this.props.started === true && prevProps.started === false) {
       this.setState({
         intervalId: setInterval(this.tick, 1000),
@@ -42,7 +48,13 @@ export class Timer extends Component<TimerProps, TimerState> {
     }
   }
 
+  public componentWillUnmount() {
+    if (this.state.intervalId !== undefined) {
+      clearInterval(this.state.intervalId);
+    }
+  }
+
   public render = () => {
-    return <div>{this.state.value}</div>;
+    return <span>{this.state.value}</span>;
   };
 }
