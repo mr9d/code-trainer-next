@@ -1,30 +1,28 @@
 import { Question } from "../types/Question";
 
-const questions: Question[] = [
+export const jsQuestions: Question[] = [
   {
-    text: "",
-    answer: "",
+    text: "Служебное слово JavaScript для определeния константной переменной",
+    answer: "const",
   },
   {
-    text: "",
-    answer: "",
+    text: "Метод JavaScript для фильтрации массива",
+    answer: "filter",
   },
   {
-    text: "",
-    answer: "",
+    text: "Глобальный класс в JavaScript с математическими операциями",
+    answer: "Math",
   },
   {
-    text: "",
-    answer: "",
+    text: "Функция для получения целочественного значения из строки в JavaScript",
+    answer: "parseInt",
   },
   {
-    text: "",
-    answer: "",
+    text: "Общий класс-родитель для всех объектов в JavaScript",
+    answer: "Object",
   },
   {
-    text: "",
-    answer: "",
+    text: "Ключевое слово для обращения объекта в JavaScript к самому себе",
+    answer: "this",
   },
 ];
-
-export default questions;

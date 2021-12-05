@@ -1,30 +1,28 @@
 import { Question } from "../types/Question";
 
-const questions: Question[] = [
+export const htmlQuestions: Question[] = [
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для разметки тела документа",
+    answer: "body",
   },
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для разметки служебной информации о странице",
+    answer: "head",
   },
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для разметки заголовка страницы",
+    answer: "title",
   },
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для изображения",
+    answer: "img",
   },
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для параграфа с текстом",
+    answer: "p",
   },
   {
-    text: "",
-    answer: "",
+    text: "HTML-тег для заголовка второго уровня",
+    answer: "h2",
   },
 ];
-
-export default questions;

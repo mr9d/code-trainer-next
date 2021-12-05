@@ -1,30 +1,16 @@
 import { Question } from "../types/Question";
 
-const questions: Question[] = [
+export const sqlQuestions: Question[] = [
   {
-    text: "",
-    answer: "",
+    text: "Ключевое слово в SQL для добавления данных",
+    answer: "insert",
   },
   {
-    text: "",
-    answer: "",
+    text: "Ключевое слово в SQL для запроса данных",
+    answer: "select",
   },
   {
-    text: "",
-    answer: "",
-  },
-  {
-    text: "",
-    answer: "",
-  },
-  {
-    text: "",
-    answer: "",
-  },
-  {
-    text: "",
-    answer: "",
+    text: "Ключевое слово в SQL для добавления данных",
+    answer: "insert",
   },
 ];
-
-export default questions;
