@@ -7,8 +7,8 @@ function CodeTrainerApp({ Component, pageProps }: AppProps) {
   return (
     <Layout>
       <Head>
-        <title>Code trainer</title>
-        <meta name="description" content="Code trainer application" />
+        <title>CodeTrainer</title>
+        <meta name="description" content="Тренажер для изучения программирования" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <Component {...pageProps} />
