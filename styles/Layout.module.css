@@ -14,6 +14,15 @@
   max-width: 1000px;
 }
 
+.columns {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  flex-direction: row;
+  column-gap: 0.5em;
+}
+
 .page__header {
   flex: 0 0 80px;
   background: #eb5e0b;
@@ -36,12 +45,24 @@
   color: black;
 }
 
-.footer__top {
+.page__footer a {
+  color: black;
+}
+
+.page__footer-top {
   background: #5eaaa8;
   color: white;
   padding: 1em 0;
 }
 
-.footer__bottom {
+.page__footer-top a {
+  color: white;
+}
+
+.page__footer-bottom {
   padding: 1em 0;
+}
+
+.page__footer-bottom p {
+  margin: 0;
 }

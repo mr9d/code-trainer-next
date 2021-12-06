@@ -14,11 +14,17 @@ export class Layout extends Component {
           <div className={styles.centered}>{this.props.children}</div>
         </main>
         <footer className={styles.page__footer}>
-          <section className={styles.footer__top}>
-            <div className={styles.centered}>Work in progress</div>
+          <section className={styles["page__footer-top"]}>
+            <div className={styles.centered}><a href="https://github.com/mr9d/code-trainer-next">Исходный код (GitHub)</a></div>
           </section>
-          <section className={styles.footer__bottom}>
-            <div className={styles.centered}>&copy;2021, Alexander Kozlov</div>
+          <section className={styles["page__footer-bottom"]}>
+            <div className={`${styles.centered} ${styles.columns}`}>
+              <div>&copy;2021,</div>
+              <div>
+                <p>Разработка &mdash; <a href="https://github.com/mr9d/">Александр Козлов</a></p>
+                <p>Идея &mdash; <a href="https://github.com/kiberlain">Андрей Курницкий</a></p>
+              </div>
+            </div>
           </section>
         </footer>
       </div>
