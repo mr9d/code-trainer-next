@@ -22,10 +22,6 @@ class HomePage extends Component<HomePageProps, HomePageState> {
     };
   }
 
-  public static getInitialProps = async () => {
-    return {};
-  };
-
   private techCheckboxClick = (tech: string) => {
     const checked: boolean = this.state.techs.includes(tech);
     if (checked) {
@@ -55,7 +51,7 @@ class HomePage extends Component<HomePageProps, HomePageState> {
               type="checkbox"
               value={technology.code}
               checked={this.state.techs.includes(technology.code)}
-              onClick={this.techCheckboxClick.bind(this, technology.code)}
+              onChange={this.techCheckboxClick.bind(this, technology.code)}
             />{" "}
             <span>{technology.name}</span>
           </label>
