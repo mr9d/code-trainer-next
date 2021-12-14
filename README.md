@@ -18,7 +18,7 @@ npm run build && npm run start
 
 Добавление/исправление вопросов: [/tree/main/data](https://github.com/mr9d/code-trainer-next/tree/main/data)
 
-Ссылки для разработчика:
+Ссылки для разработчика :
 
 - [Документация по TypeScript](https://www.typescriptlang.org/docs/)
 - [Документация по React](https://reactjs.org/docs/getting-started.html)
