@@ -1,26 +1,52 @@
-# Тренажер для изучения программирования
+# Funny coding training application
 
-## Запуск
+## About
 
-[Публичная версия приложения на Heroku](https://codetrainer.herokuapp.com/) (разворачивается из `main`)
+Improve your muscle memory by typing programming terms. It will help you to become better at coding, won’t it? This application was inspired by my mentee with an IT infrastructure background who wanted to learn to code but was blocked by a lack of a training application. This application was built based on his description.
 
-Локальная версия:
+## Current status
 
-```bash
-npm run build && npm run start
-```
+The application is working as a Proof-of-concept. I have no plans to develop it further.
 
-Откройте [http://localhost:3000](http://localhost:3000) в браузере.
+If you like the idea, feel free to improve it via the Pull Requests procedure. Read more [about Contributing to a Project](https://git-scm.com/book/en/v2/GitHub-Contributing-to-a-Project).
 
-## Внесение вклада в проект
+## Live version
 
-Отправляйте фиксы и доработки через пул реквесты: [инструкция](https://git-scm.com/book/ru/v2/GitHub-%D0%92%D0%BD%D0%B5%D1%81%D0%B5%D0%BD%D0%B8%D0%B5-%D1%81%D0%BE%D0%B1%D1%81%D1%82%D0%B2%D0%B5%D0%BD%D0%BD%D0%BE%D0%B3%D0%BE-%D0%B2%D0%BA%D0%BB%D0%B0%D0%B4%D0%B0-%D0%B2-%D0%BF%D1%80%D0%BE%D0%B5%D0%BA%D1%82%D1%8B)
+Available at Heroku: <https://codetrainer.herokuapp.com/> (deployed from the `main` branch)
 
-Добавление/исправление вопросов: [/tree/main/data](https://github.com/mr9d/code-trainer-next/tree/main/data)
+## Running locally
 
-Ссылки для разработчика:
+If you want to run the application locally, you can do the following:
 
-- [Документация по TypeScript](https://www.typescriptlang.org/docs/)
-- [Документация по React](https://reactjs.org/docs/getting-started.html)
-- [Документация по Next.js](https://nextjs.org/docs)
-- [Изучение Next.js](https://nextjs.org/learn)
+1. `git clone` the repository
+2. Run `npm install`
+3. Build project by running `npm run build`
+4. Start project with `npm run start`
+
+After the successful execution the local instance should be available at <http://localhost:3000>
+
+## How to use
+
+At first, you must to select technologies you want to train.
+
+There are two modes: training (the application shows you the correct answer) and exam (you don’t see the correct answer). The exam mode is not implemented yet, training - is the only option for now.
+
+Next, you’ll see a number of questions in the database based on the technologies you selected. You can input a number of questions for one session of training. And then click “Start”.
+
+For each question, you will see the question and correct answer. You have 20 seconds to input this answer in the field.
+
+After the last question, you are supposed to see the statistics of your session. But this is not implemented as well.
+
+## Adding topics and questions
+
+New topics (technologies) and questions can be easily added with Pull Requests.
+
+The list of all topics (technologies) is available in the [data/index.ts](/data/index.ts) file. A list of questions for each technology could be found in the [data/](/data/) subdirectory.
+
+## Used technologies
+
+- TypeScript 4.5 ([documentation](https://www.typescriptlang.org/docs/))
+- React 17 ([documentation](https://reactjs.org/docs/getting-started.html))
+- Next.js 12.0 ([documentation](https://nextjs.org/docs), [learn](https://nextjs.org/learn))
+- GitHub Actions ([documentation](https://docs.github.com/en/actions))
+- [Heroku](https://heroku.com/)
